@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+<h2>Welcome {{ session['username'] }}</h2>
+<h3>Available Trains</h3>
+<ul>
+  {% for train in trains %}
+    <li>{{ train.name }} - <a href="/book/{{ train.id }}">Book</a></li>
+  {% endfor %}
+</ul>
+<p><a href="/my_tickets">My Tickets</a></p>
+</body>
+</html>

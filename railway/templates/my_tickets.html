@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>My Tickets</title></head>
+<body>
+<h2>My Tickets</h2>
+<ul>
+  {% for t in tickets %}
+    <li>Train ID: {{ t.train_id }} | Class: {{ t.class }} | People: {{ t.people }}</li>
+  {% endfor %}
+</ul>
+<a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
